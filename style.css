@@ -172,9 +172,22 @@ nav li:hover {
     cursor: pointer;
     margin: auto 20px;
 }
-.sub-skill i {
-    font-size: 100px;
+.langguage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.langguage i, .frameworks i {
+    font-size: 80px;
     margin-right: 50px;
     cursor: pointer;
 }
-
+.frameworks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.frameworks img {
+    cursor: pointer;
+    width: 80px;
+}
