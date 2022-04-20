@@ -1,193 +1,80 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* -------- */
-* {
-    scroll-behavior: smooth;
-}
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
 }
-/* navigation */
+/* nav */
 nav {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 9999;
-    background-color: white;
-    box-shadow: 0 2px 10px 3px black;
-}
-nav i {
-    font-size: 30px;
-}
-nav li {
-    margin-right: 20px;
-    display: inline-block;
-    list-style-type: none;
-}
-nav li a {
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-nav li:hover {
-    transition: 0.2s ease-in;
-    transform: scale(1.1);
-}
-/* banner */
-.banner {
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
-    padding-top: 60px;
-    height: 50vh;
-    max-height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 -2px 10px 3px black;
+    box-sizing: border-box;
 }
-.tagline {
-    padding: 10px;
-}
-.tagline h1 {
-    font-size: 25px;
-    font-weight: bold;
-    color: white;
-}
-.tagline p {
-    padding-top: 5px;
-    font-weight: lighter;
-    color: white;
-}
-.photo-profile {
-    padding: 10px;
-}
-.photo-profile img {
-    box-shadow: 0 0 10px 5px black;
-    margin-right: 50px;
-    border-radius: 3px;
-    width: 150px;
-}
-/* project section */
-#projects {
-    text-align: center;
-}
-#projects h1 {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 50px;
-}
-#website, #codepen {
-    padding-bottom: 10px;
-    text-align: center;
-}
-#website h2, #codepen h2 {
-    padding: 10px 0px;
-    font-weight: bold;
-    font-size: 20px;
-}
-.project-group {
+nav ul {
     display: flex;
-    overflow: auto;
-    justify-content: flex-start;
-    align-items: center;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
 }
-.project-group img {
-    border-radius: 5px;
-    max-height: 700px;
-    width: 500px;
-    margin-right: 20px;
-}
-.project-group img:hover {
-    -webkit-filter: blur(1px);
-    filter: blur(1.5px);
+nav ul li {
     transition: 0.5s;
 }
-#website a, #codepen a {
-    cursor: pointer;
+nav ul li a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
+    font-size: 0.8em;
 }
-/* skills section */
-#skills {
+nav ul li:hover {
+    transform: scale(1.2);
+}
+/* banner */
+.banner {
+    color: white;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    min-height: 55vh;
+}
+.banner img {
+    width: 200px;
+    box-shadow: 0 0 5px 3px black;
+    border-radius: 5px;
+}
+/* footer */
+footer h3 {
     text-align: center;
 }
-#skills h1 {
-    font-size: 40px;
-    font-weight: bold;
-    padding: 50px;
-}
-.skill-container {
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
-.skill h3, .skill i{
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    margin: auto 20px;
+.contact img {
+    width: 50px;
+    padding-top: 5px;
 }
-.langguage {
+.instagram, .whatsapp {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
 }
-.langguage i, .frameworks i {
-    font-size: 80px;
-    margin-right: 50px;
-    cursor: pointer;
+.instagram h3, .whatsapp h3 {
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-45px);
+    z-index: -1;
+    position: relative;
 }
-.frameworks {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.instagram a, .whatsapp a {
+    text-decoration: none;
+    color: black;
 }
-.frameworks img {
-    cursor: pointer;
-    width: 80px;
-}
+.instagram a:hover ~ a h3, .whatsapp a:hover ~ a h3 {
+    opacity: 1;
+    transform: translateY(-25px);
+} 
