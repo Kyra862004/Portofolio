@@ -10,12 +10,33 @@ nav {
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 99999;
 }
 nav ul {
     display: flex;
     list-style: none;
     width: 40%;
     justify-content: space-between;
+}
+#menu, #close {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 30px;
+    opacity: 0;
+}
+nav input {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 24.5px;
+    transform: scale(2);
+    opacity: 0;
 }
 nav ul li {
     transition: 0.5s;
@@ -78,3 +99,82 @@ footer h3 {
     opacity: 1;
     transform: translateY(-25px);
 } 
+/* projects */
+main h3 {
+    text-align: center;
+}
+.projects {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.projects i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    overflow: auto;
+    box-sizing: border-box;
+    background-color: red;
+    border-radius: 10px;
+    width: 80%;
+
+}
+.card img {
+    width: 100%;
+    
+}
+.next {
+    display: none;
+}
+/* responsive */
+@media (max-width: 425px) {
+    nav input:checked ~ #menu {
+        transition: 0.2s;
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    nav input:checked ~ #close {
+        transform: rotate(180deg);
+        opacity: 1;
+        transition: 1s;
+    }
+    nav input:checked ~ ul {
+        right: 0;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    nav ul{
+        top: 60%;
+        right: -900px;
+        border-radius: 5px;
+        z-index: -1;
+        position: absolute;
+        overflow: hidden;
+        padding: 10px;
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        transition: 0.5s ease-in-out;
+    }
+    #menu {
+        opacity: 1;
+    }
+    #close {
+        opacity: 0;
+    }
+    .banner {
+        padding-top: 100px;
+        flex-direction: column-reverse;
+        text-align: center;
+        font-size: 0.8em;
+        min-height: 444px;
+    }
+    .banner img {
+        width: 120px;
+    }
+}
