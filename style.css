@@ -16,6 +16,7 @@ nav {
     width: 100%;
     background-color: white;
     z-index: 99999;
+    box-shadow: 0 2px 10px 5px black;
 }
 nav ul {
     display: flex;
@@ -52,6 +53,7 @@ nav ul li:hover {
 }
 /* banner */
 .banner {
+    margin: 100px auto;
     color: white;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     display: flex;
@@ -66,68 +68,65 @@ nav ul li:hover {
     border-radius: 5px;
 }
 /* footer */
-footer h3 {
-    text-align: center;
-}
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.contact img {
-    width: 50px;
-    padding-top: 5px;
-}
-.instagram, .whatsapp {
+footer {
+    margin: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.instagram h3, .whatsapp h3 {
-    opacity: 0;
-    transition: 0.5s;
-    transform: translateY(-45px);
-    z-index: -1;
-    position: relative;
-}
-.instagram a, .whatsapp a {
-    text-decoration: none;
-    color: black;
-}
-.instagram a:hover ~ a h3, .whatsapp a:hover ~ a h3 {
-    opacity: 1;
-    transform: translateY(-25px);
-} 
-/* projects */
-main h3 {
+footer h3 {
     text-align: center;
 }
-.projects {
-    padding: 20px;
+.contact {
+    box-shadow: 0 0 10px 5px black;
+    padding: 10px;
+    width: 90%;
+    border-radius: 10px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
 }
-.projects i {
-    font-size: 30px;
-    cursor: pointer;
-}
-.card {
+.instagram, .whatsapp, .github, .codepen, .freecodecamp {
     display: flex;
-    overflow: auto;
-    box-sizing: border-box;
-    background-color: red;
+    flex-direction: column;
+    align-items: center;
+}
+.instagram:hover > a i, .whatsapp:hover > a i, .github:hover > a i, .codepen:hover > a i, .freecodecamp:hover > a i {
+    transform: translateY(-5px);
+}
+.instagram a, .whatsapp a, .github a, .codepen a, .freecodecamp a {
+    color: black;
+    text-decoration: none;
+}
+.instagram a i, .whatsapp a i, .github a i, .codepen a i, .freecodecamp a i {
+    transition: 0.5s ease-in-out;
+    font-size: 2.5em;
+}
+.instagram a h3, .whatsapp a h3, .github a h3, .codepen a h3, .freecodecamp a h3 {
+    font-size: 0.5em;
+}
+.contact img {
+    width: 50px;
+}
+/* projects */ 
+main h3 {
+    text-align: center;
+    font-size: 2em;
+}
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    margin: 50px 0;
+}
+.projects h3 {
+    font-size: 1em;
+}
+.projects img {
     border-radius: 10px;
     width: 80%;
-
-}
-.card img {
-    width: 100%;
-    
-}
-.next {
-    display: none;
 }
 /* responsive */
 @media (max-width: 425px) {
@@ -142,20 +141,21 @@ main h3 {
         transition: 1s;
     }
     nav input:checked ~ ul {
-        right: 0;
+        right: -10px;
     }
     nav {
         justify-content: space-around;
     }
     nav ul{
-        top: 60%;
-        right: -900px;
+        box-shadow: 0px 2px 10px 5px black;
+        top: 80%;
+        right: -500px;
         border-radius: 5px;
-        z-index: -1;
         position: absolute;
         overflow: hidden;
         padding: 10px;
         gap: 40px;
+        width: 100%;
         flex-direction: column;
         align-items: center;
         background-color: white;
@@ -168,7 +168,6 @@ main h3 {
         opacity: 0;
     }
     .banner {
-        padding-top: 100px;
         flex-direction: column-reverse;
         text-align: center;
         font-size: 0.8em;
@@ -176,5 +175,12 @@ main h3 {
     }
     .banner img {
         width: 120px;
+    }
+    /* footer */
+    .instagram a i, .whatsapp a i, .github a i, .codepen a i, .freecodecamp a i {
+        font-size: 1.5em;
+    }
+    .instagram a h3, .whatsapp a h3, .github a h3, .codepen a h3, .freecodecamp a h3 {
+        font-size: 0.2em;
     }
 }
