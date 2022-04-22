@@ -1,96 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/e12feb2a72.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e12feb2a72.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="shortcut icon" href="../images/profile.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../images/profile.jpg"
+      type="image/x-icon"
+    />
     <title>Portofolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <h1><i class="fa-solid fa-code"></i> Rizky</h1>
-            <input type="checkbox" id="toggle">
-            <i class="fa-solid fa-bars" id="menu"></i>
-            <i class="fa-solid fa-x" id="close"></i>
-            <ul>
-                <li><a href="../index.html">HOME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="profile.html">PROFILE</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <h1><i class="fa-solid fa-code"></i> Rizky</h1>
+        <input type="checkbox" id="toggle" />
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <i class="fa-solid fa-x" id="close"></i>
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="skills.html">SKILLS</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="skills">
-            <div class="skills-container">
-                <h3>SKILLS</h3>
-                <h4 id="front-end-toggle">FRONT END</h4>
-                <div class="front-end">
-                    <div class="html">
-                        <img src="../images/html.png" alt="html">
-                        <h5>HTML</h5>
-                    </div>
-                    <div class="css">
-                        <img src="../images/css.png" alt="css">
-                        <h5>CSS</h5>
-                    </div>
-                    <div class="javascript">
-                        <img src="../images/javascript.png" alt="javascript">
-                        <h5>JAVASCRIPT</h5>
-                    </div>
-                    <div class="bootstrap">
-                        <img src="../images/bootstrap.png" alt="bootstrap">
-                        <h5>BOOTSTRAP</h5>
-                    </div>
-                    <div class="jquery">
-                        <img src="../images/jquery.png" alt="jquery">
-                        <h5>JQUERY</h5>
-                    </div>
-                    <div class="react">
-                        <img src="../images/react.png" alt="react">
-                        <h5>REACT</h5>
-                    </div>
-                </div>
-                <h4 id="back-end-toggle">BACK END</h4>
-                <div class="back-end">
-                    <div class="php">
-                        <img src="../images/php.png" alt="php">
-                        <h5>PHP</h5>
-                    </div>
-                </div>
+      <section class="skills">
+        <div class="skills-container">
+          <h3>SKILLS</h3>
+          <h4 id="front-end-toggle">
+            <input type="checkbox" id="front-end-checkbox" />FRONT END
+            <i class="fa-solid fa-angle-right" id="front-end-arrow"></i>
+          </h4>
+          <div class="front-end">
+            <div class="html">
+              <img src="../images/html.png" alt="html" />
+              <h5>HTML</h5>
             </div>
-        </section>
+            <div class="css">
+              <img src="../images/css.png" alt="css" />
+              <h5>CSS</h5>
+            </div>
+            <div class="javascript">
+              <img src="../images/javascript.png" alt="javascript" />
+              <h5>JAVASCRIPT</h5>
+            </div>
+            <div class="bootstrap">
+              <img src="../images/bootstrap.png" alt="bootstrap" />
+              <h5>BOOTSTRAP</h5>
+            </div>
+            <div class="jquery">
+              <img src="../images/jquery.png" alt="jquery" />
+              <h5>JQUERY</h5>
+            </div>
+            <div class="react">
+              <img src="../images/react.png" alt="react" />
+              <h5>REACT</h5>
+            </div>
+          </div>
+          <h4 id="back-end-toggle">
+            <input type="checkbox" id="back-end-checkbox" />BACK END
+            <i class="fa-solid fa-angle-right" id="back-end-arrow"></i>
+          </h4>
+          <div class="back-end">
+            <div class="php">
+              <img src="../images/php.png" alt="php" />
+              <h5>PHP</h5>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <h3>CONTACT ME AT</h3>
-        <div class="contact">
-            <div class="instagram">
-                <a href="https://www.instagram.com/fauzirizkyw/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.instagram.com/fauzirizkyw/" target="_blank"><h3>INSTAGRAM</h3></a>
-            </div>
-            <div class="whatsapp">
-                <a href="https://api.whatsapp.com/send?phone=6289627030604&text=Hello%2C%20i%20am%20Rizky%20Fauzi%20Ilmi" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=6289627030604&text=Hello%2C%20i%20am%20Rizky%20Fauzi%20Ilmi" target="_blank"><h3>PERSONAL CONTACT</h3></a>
-            </div>
-            <div class="github">
-                <a href="https://github.com/RizkyFauziIlmi" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://github.com/RizkyFauziIlmi" target="_blank"><h3>GITHUB</h3></a>
-            </div>
-            <div class="codepen">
-                <a href="https://codepen.io/rizkyfauziilmi" target="_blank"><i class="fa-brands fa-codepen"></i></a>
-                <a href="https://codepen.io/rizkyfauziilmi" target="_blank"><h3>CODEPEN</h3></a>
-            </div>
-            <div class="freecodecamp">
-                <a href="https://www.freecodecamp.org/rizkyfauziilmi" target="_blank"><i class="fa-brands fa-free-code-camp"></i></a>
-                <a href="https://www.freecodecamp.org/rizkyfauziilmi" target="_blank"><h3>PFREECODECAMP</h3></a>
-            </div>
+      <h3>CONTACT ME AT</h3>
+      <div class="contact">
+        <div class="instagram">
+          <a href="https://www.instagram.com/fauzirizkyw/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.instagram.com/fauzirizkyw/" target="_blank"
+            ><h3>INSTAGRAM</h3></a
+          >
         </div>
+        <div class="whatsapp">
+          <a
+            href="https://api.whatsapp.com/send?phone=6289627030604&text=Hello%2C%20i%20am%20Rizky%20Fauzi%20Ilmi"
+            target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=6289627030604&text=Hello%2C%20i%20am%20Rizky%20Fauzi%20Ilmi"
+            target="_blank"
+            ><h3>PERSONAL CONTACT</h3></a
+          >
+        </div>
+        <div class="github">
+          <a href="https://github.com/RizkyFauziIlmi" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://github.com/RizkyFauziIlmi" target="_blank"
+            ><h3>GITHUB</h3></a
+          >
+        </div>
+        <div class="codepen">
+          <a href="https://codepen.io/rizkyfauziilmi" target="_blank"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+          <a href="https://codepen.io/rizkyfauziilmi" target="_blank"
+            ><h3>CODEPEN</h3></a
+          >
+        </div>
+        <div class="freecodecamp">
+          <a href="https://www.freecodecamp.org/rizkyfauziilmi" target="_blank"
+            ><i class="fa-brands fa-free-code-camp"></i
+          ></a>
+          <a href="https://www.freecodecamp.org/rizkyfauziilmi" target="_blank"
+            ><h3>PFREECODECAMP</h3></a
+          >
+        </div>
+      </div>
     </footer>
     <script src="../script.js"></script>
-</body>
+  </body>
 </html>
