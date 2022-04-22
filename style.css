@@ -70,7 +70,7 @@ nav ul li:hover {
     animation: banner-load var(--var-banner-time) ease-in;
 }
 .banner img {
-    width: 30%;
+    width: 15%;
     box-shadow: 0 0 5px 3px black;
     border-radius: 5px;
 }
