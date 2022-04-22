@@ -177,7 +177,7 @@ main h2 {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0 0 10px 5px black;
+    box-shadow: 0 0 3px 5px black;
     border-radius: 10px;
     box-sizing: border-box;
     animation: skills-load var(--var-skills-time) ease-in ;
