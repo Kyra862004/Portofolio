@@ -126,7 +126,13 @@ main h3 {
 }
 .projects img {
     border-radius: 10px;
-    width: 80%;
+    width: 50%;
+}
+.row-projects {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+    margin: 0 40px;
 }
 /* responsive */
 @media (max-width: 425px) {
