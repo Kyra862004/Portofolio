@@ -261,4 +261,11 @@ main h3 {
     .instagram a h3, .whatsapp a h3, .github a h3, .codepen a h3, .freecodecamp a h3 {
         font-size: 0.2em;
     }
+    /* skills section */
+    .front-end {
+        flex-wrap: wrap;
+    }
+    .back-end {
+        flex-wrap: wrap;
+    }
 }
