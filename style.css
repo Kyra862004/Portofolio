@@ -8,6 +8,7 @@ body {
     --var-footer-time: 1000ms;
     --var-projects-time: 1000ms;
     --var-skills-time: 1000ms;
+    --var-certificate-time: 1000ms;
 }
 /* nav */
 nav {
@@ -28,6 +29,7 @@ nav ul {
     display: flex;
     list-style: none;
     width: 40%;
+    gap: 20px;
     justify-content: space-between;
 }
 #menu, #close {
@@ -163,7 +165,6 @@ main h2 {
     width: 100%;
     margin: 150px 0 50px 0;
     color: white;
-    text-shadow: 3px 1px black;
 }
 .skills-container h3 {
     font-size: 1.5em;
@@ -177,7 +178,7 @@ main h2 {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0 0 3px 5px black;
+    box-shadow: 0 0 5px 3px black;
     border-radius: 10px;
     box-sizing: border-box;
     animation: skills-load var(--var-skills-time) ease-in ;
@@ -235,6 +236,45 @@ main h2 {
     align-items: center;
     justify-content: space-between;   
 }
+/* certificate section */
+.certificate {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.certificate-container {
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 90%);
+    width: 80%;
+    box-shadow: 0 0 5px 3px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: certificate-load var(--var-certificate-time) ease-in;
+}
+.certificate-row {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.certificate-row img {
+    width: 200px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+.certificate-des {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
 /* load animation */
 @keyframes nav-load {
     from {
@@ -276,8 +316,16 @@ main h2 {
         transform: none;
     }
 }
+@keyframes certificate-load {
+    from {
+        transform: translateX(-2500px);
+    }
+    to {
+        transform: none;
+    }
+}
 /* responsive */
-@media (max-width: 425px) {
+@media (max-width: 590px) {
     nav input:checked ~ #menu {
         transition: 0.2s;
         opacity: 0;
@@ -297,7 +345,7 @@ main h2 {
     nav ul{
         box-shadow: 0px 2px 10px 5px black;
         top: 80%;
-        right: -500px;
+        right: -700px;
         border-radius: 5px;
         position: absolute;
         overflow: hidden;
@@ -341,5 +389,10 @@ main h2 {
     }
     .back-end {
         flex-wrap: wrap;
+    }
+    /* certificate section */
+    .certificate-row {
+        flex-direction: column;
+        align-items: center;
     }
 }
